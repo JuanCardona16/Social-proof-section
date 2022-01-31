@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  background: var(--White);
+}
+
+img.pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+img.pattern-2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.deskPattern,
+.deskPattern-2 {
+  display: none;
+}
+
+.container {
+  margin: 40px 15px;
+  padding: 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  color: var(--VeryDarkMagenta);
+  font-size: 2.6em;
+  font-weight: 700;
+  margin-bottom: .9rem;
+}
+
+.hero p {
+  font-weight: 400;
+  line-height: 1.4rem;
+  color: var(--DarkGrayishMagenta);
+}
+
+.validationStart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3em;
+}
+
+.validationStart span{
+  background: var(--LightGrayishMagenta);
+  border-radius: 8px;
+  color: var(--VeryDarkMagenta);
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 25px;
+}
+
+.validationStart span div {
+  margin-bottom: .5rem;
+}
+
+.usersCommits .card {
+  background: var(--VeryDarkMagenta);
+  padding: 30px;
+  border-radius: .5rem;
+  color: var(--White);
+  height: max-content;
+}
+
+.usersCommits .card:nth-child(2), 
+.usersCommits .card:last-child {
+  margin-top: 1rem;
+}
+
+
+.card p {
+  font-size: .9em;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.card .user {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50em;
+}
+
+.card .user h2 {
+  font-size: .9em;
+  color: var(--White);
+}
+
+.card .user p {
+  color: var(--SoftPink);
+  font-size: .8em;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+
+  img.pattern,
+  img.pattern-2 {
+    display: none;
+  }
+
+  .deskPattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .deskPattern-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1 ;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .hero {
+    width: 480px;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 3em;
+  }
+  
+  
+  .validationStart {
+    display: block;
+    width: 600px;
+  }
+  
+  .validationStart span{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: max-content;
+    padding: 20px 50px 20px 30px;
+  }
+
+  .validationStart span:first-child {
+    margin-top: 40px;
+  }
+
+  .validationStart span:nth-child(2) {
+    margin: 15px 0px 15px 80px;
+  }
+
+  .validationStart span:last-child {
+    margin-left: 180px;
+  }
+
+  .validationStart span div{
+    margin-bottom: 0;
+  }
+
+  .usersCommits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .usersCommits .card {
+    padding: 20px;
+    width: 360px;
+  }
+
+  .usersCommits .card:nth-child(2) {
+    margin-top: 2rem;
+  } 
+
+  .usersCommits .card:last-child {
+    margin-top: 4rem;
+  }
+}
